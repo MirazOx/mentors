@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miraz Mentors — Boutique Graduate Admissions Strategy</title>
+<meta name="description" content="Elite admissions strategy for PhD and Masters candidates. Only five applicants per cycle. Guided by Md. Miraz Hossain, Dhaka University English alumnus & former SI-UK counsellor.">
+
+<!-- SEO Meta and OpenGraph tags -->
+<meta name="author" content="Miraz Mentors">
+<meta name="keywords" content="PhD admissions, Masters admissions, SOP writing, Ivy League strategy, graduate school consultancy, Dhaka University English, Md. Miraz Hossain">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22serif%22 fill=%22%23162033%22>M</text></svg>">
+
+<!-- Google Fonts — Cormorant Garamond (Serif) & Manrope (Sans Body/UI) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Oxford Desk / Quiet Academic Color System */
+:root {
+  --ink: #162033;
+  --ink-deep: #0F1922;
+  --ink-soft: #5D6678;
+  --paper: #F5F6F8; /* premium cool-slate alabaster */
+  --paper-warm: #EBECEF; /* structures and panels */
+  --cream: #FFFFFF; /* crisp pure white highlights */
+  --gold: #8B1E2F; /* prestigious scholarly crimson/burgundy */
+  --gold-soft: #A22E42;
+  --green: #31572C;
+  --line: rgba(22, 32, 51, 0.08); /* clean, soft dividers */
+  
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Manrope', system-ui, sans-serif;
+  
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Accessibility Focus Ring Replacement based on Web Interface Guidelines */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background: linear-gradient(135deg, #E4E8EB 0%, #F5F6F8 50%, #E9ECF0 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  font-weight: 400;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- NAVIGATION HEADER (Oxford floating style) ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.site-header.scrolled {
+  background-color: rgba(245, 246, 248, 0.97); /* var(--paper) with premium glassmorphism */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  height: 70px;
+}
+
+.header-container {
+  max-width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.35rem;
+  letter-spacing: 0.05em;
+  color: var(--cream);
+  transition: color 0.3s ease;
+}
+
+.site-header.scrolled .logo {
+  color: var(--ink);
+}
+
+.logo-serif {
+  font-family: var(--serif);
+  font-weight: 500;
+}
+
+.logo-sans {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  letter-spacing: 0.15em;
+}
+
+.site-header.scrolled .logo-sans {
+  color: var(--gold);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 0.725rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(250, 246, 239, 0.75);
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.site-header.scrolled .nav-link {
+  color: var(--ink-soft);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--gold);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--cream);
+}
+
+.site-header.scrolled .nav-link:hover {
+  color: var(--ink);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cream);
+  border: 1px solid rgba(250, 246, 239, 0.25);
+  padding: 0.65rem 1.4rem;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.site-header.scrolled .nav-cta {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.nav-cta:hover {
+  background-color: var(--gold);
+  color: var(--ink-deep);
+  border-color: var(--gold);
+}
+
+.site-header.scrolled .nav-cta:hover {
+  background-color: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* ---------- HERO (Quiet Academic, Twinkling Night Sky) ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--ink-deep);
+  color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+#sparkles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+
+.hero::after { /* Luxury radial overlay glow */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 540px at 50% 38%, rgba(182, 141, 64, 0.12), transparent 60%),
+    radial-gradient(100% 90% at 50% 120%, rgba(15, 25, 34, 0.95), transparent 70%);
+}
+
+.hero-center {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 28px 100px;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: rise 1s 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  max-width: 90%;
+  line-height: 1.5;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(3rem, 7.5vw, 5.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--cream);
+  margin-bottom: 38px;
+  opacity: 0;
+  animation: rise 1.1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: rise 1.2s 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+  z-index: 5;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  background: var(--gold);
+  color: var(--ink-deep);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  padding: 18px 36px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 14px 34px -10px rgba(182, 141, 64, 0.4);
+  border: 1px solid var(--gold);
+}
+
+.btn-primary:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px -12px rgba(182, 141, 64, 0.55);
+}
+
+.btn-primary svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(250, 246, 239, 0.9);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 17px 26px;
+  border: 1px solid rgba(250, 246, 239, 0.22);
+  border-radius: 2px;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+
+.btn-ghost:hover {
+  color: var(--cream);
+  border-color: var(--gold-soft);
+  background: rgba(182, 141, 64, 0.08);
+}
+
+.scroll-hint {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding-bottom: 35px;
+  font-size: 0.725rem;
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(250, 246, 239, 0.4);
+  opacity: 0;
+  animation: rise 1.3s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.scroll-hint .arrow {
+  display: block;
+  margin: 12px auto 0;
+  width: 1px;
+  height: 38px;
+  background: linear-gradient(rgba(182, 141, 64, 0.8), transparent);
+  animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(7px); opacity: 0.3; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- section scaffolding ---------- */
+section {
+  position: relative;
+  z-index: 2;
+  scroll-margin-top: 100px;
+}
+
+.pad {
+  padding: 120px 0;
+}
+
+.sec-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.sec-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.sec-intro {
+  font-size: 1.15rem;
+  font-family: var(--sans);
+  font-weight: 300;
+  color: var(--ink-soft);
+  max-width: 58ch;
+  line-height: 1.75;
+}
+
+/* ---------- HOW IT WORKS (the spine) ---------- */
+.how {
+  background: var(--ink);
+  color: var(--cream);
+  border-top: 1px solid rgba(216, 205, 184, 0.1);
+}
+
+.how .sec-eyebrow {
+  color: var(--gold-soft);
+}
+
+.how .sec-title {
+  color: var(--cream);
+}
+
+.how .sec-title em {
+  color: var(--gold-soft);
+}
+
+.how-head {
+  max-width: 680px;
+  margin-bottom: 70px;
+}
+
+.how-head .sec-intro {
+  color: rgba(250, 246, 239, 0.74);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+@media(max-width:760px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.step {
+  padding-top: 28px;
+  border-top: 2px solid rgba(182, 141, 64, 0.35);
+}
+
+.step .sn {
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  color: var(--gold-soft);
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+
+.step h4 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--cream);
+}
+
+.step p {
+  font-size: 0.98rem;
+  font-family: var(--sans);
+  font-weight: 300;
+  color: rgba(250, 246, 239, 0.76);
+  line-height: 1.7;
+}
+
+/* ---------- APPROACH ---------- */
+.approach {
+  background: transparent;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media(max-width:880px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.approach-points {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.point {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.point .pn {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--gold);
+  border: 1px solid var(--line);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--paper-warm);
+}
+
+.point h4 {
+  font-size: 1.1rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.point p {
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* Exclusivity Card as a "Luxury Admissions Object" with dark glassmorphism */
+.approach-card {
+  background: rgba(15, 25, 34, 0.85); /* dark frosted glass */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--cream);
+  padding: 56px 48px;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 30px 70px -30px rgba(15, 25, 34, 0.5),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(139, 30, 47, 0.35); /* thin crimson border */
+}
+
+.approach-card .big {
+  font-family: var(--serif);
+  font-size: 5.8rem;
+  line-height: 0.85;
+  color: var(--gold-soft);
+  font-weight: 300;
+}
+
+.approach-card .big bold {
+  font-size: 1.6rem;
+  vertical-align: super;
+  font-weight: 400;
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.approach-card .cap {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 20px 0 24px;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+}
+
+.approach-card .desc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(250, 246, 239, 0.82);
+  line-height: 1.75;
+}
+
+.approach-card .desc em {
+  font-style: italic;
+  color: var(--gold-soft);
+}
+
+/* ---------- PHILOSOPHY (Where Feature Writing Meets Academic Rigor) ---------- */
+.philosophy {
+  background: linear-gradient(135deg, #3C1017 0%, #1A0508 100%); /* deep prestigious scholarly burgundy/crimson */
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.philosophy-card {
+  background: rgba(255, 255, 255, 0.78); /* light frosted glass pane */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: var(--ink);
+  padding: 64px 52px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.45s ease, 
+              box-shadow 0.45s ease;
+}
+
+.philosophy-card:hover {
+  background: rgba(255, 255, 255, 0.88);
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px -25px rgba(0, 0, 0, 0.35), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Restrained scholarly green border at the top of the card */
+.philosophy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--green);
+  border-radius: 4px 4px 0 0;
+}
+
+.philosophy-icon {
+  font-size: 2.25rem;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.philosophy-title {
+  font-family: var(--serif);
+  font-size: 2.35rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+.philosophy-body {
+  font-size: 1.08rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  max-width: 760px;
+  margin: 0 auto 20px auto;
+  line-height: 1.75;
+}
+
+.philosophy-body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.philosophy-action {
+  margin-top: 32px;
+}
+
+.philosophy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+  transition: var(--transition);
+}
+
+.philosophy-link:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.philosophy-link .link-arrow {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.philosophy-link:hover .link-arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- SERVICES ---------- */
+.services {
+  background: transparent;
+}
+
+.svc-head {
+  max-width: 760px;
+  margin-bottom: 70px;
+}
+
+/* ---------- CREATIVE MANUSCRIPT SERVICES GRID ---------- */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 50px;
+}
+
+/* Glassmorphic card design representing academic prospectus sheet */
+.svc-card {
+  background: rgba(235, 236, 239, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(22, 32, 51, 0.04);
+  border-radius: 4px;
+  padding: 40px 34px 34px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 330px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px -15px rgba(22, 32, 51, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Scholarly top accent border that expands outwards from the center on hover */
+.svc-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: var(--gold);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.svc-card:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.svc-card:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -25px rgba(22, 32, 51, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border-color: rgba(139, 30, 47, 0.15);
+}
+
+.svc-card-header {
+  margin-bottom: 18px;
+}
+
+.svc-num {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: transform 0.4s ease;
+}
+
+.svc-card:hover .svc-num {
+  transform: scale(1.05) translateX(2px);
+}
+
+.svc-card-header h3 {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.svc-card:hover .svc-card-header h3 {
+  color: var(--gold);
+}
+
+.svc-card p {
+  font-size: 0.95rem;
+  font-family: var(--sans);
+  color: var(--ink-soft);
+  font-weight: 400;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+/* Hand-crafted admissions spec sheet metadata box representing detailed work */
+.svc-spec-box {
+  background: rgba(22, 32, 51, 0.03);
+  border: 1px solid rgba(22, 32, 51, 0.05);
+  border-radius: 3px;
+  padding: 12px 16px;
+  margin-top: auto;
+  opacity: 0.7;
+  transition: opacity 0.4s ease, background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+  transform: translateY(2px);
+}
+
+.svc-card:hover .svc-spec-box {
+  opacity: 1;
+  background-color: rgba(139, 30, 47, 0.03);
+  border-color: rgba(139, 30, 47, 0.1);
+  transform: translateY(0);
+}
+
+.spec-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.725rem;
+  font-family: var(--sans);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.spec-line:first-child {
+  margin-bottom: 4px;
+}
+
+.spec-label {
+  font-weight: 500;
+}
+
+.spec-value {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.svc-card:hover .spec-value {
+  color: var(--gold);
+}
+
+.svc-note {
+  margin-top: 60px;
+  font-size: 0.98rem;
+  color: var(--ink);
+  font-family: var(--sans);
+  background-color: rgba(139, 30, 47, 0.03); /* soft crimson tint */
+  border-left: 3px solid var(--gold); /* prestigious crimson indicator */
+  padding: 22px 28px;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.65;
+}
+
+.scope-warning {
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px dashed var(--gold);
+  padding-bottom: 1px;
+  margin-right: 4px;
+  display: inline-block;
+}
+
+@media(max-width: 980px) {
+  .svc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media(max-width: 680px) {
+  .svc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+}
+
+/* ---------- ABOUT (Meet Your Mentor) ---------- */
+.about {
+  background: transparent;
+  border-top: 1px solid var(--line);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px 80px;
+  align-items: center;
+}
+
+@media(max-width:880px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .portrait-frame {
+    justify-self: center !important;
+  }
+  .about-extended {
+    grid-column: span 1 !important;
+    margin-top: 0 !important;
+  }
+}
+
+.portrait-frame {
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease-out;
+  will-change: transform, box-shadow;
+  max-width: 400px;
+  width: 100%;
+  justify-self: end;
+}
+
+.about-extended {
+  grid-column: span 2;
+  margin-top: 24px;
+}
+
+.portrait-frame img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  filter: saturate(0.9) contrast(1.01);
+  box-shadow: 0 25px 50px -20px rgba(22, 32, 51, 0.3);
+  border: 1px solid var(--line);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Scholarly multi-layered borders offset inward to the left to prevent clipping */
+.portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: -14px 14px 14px -14px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  z-index: -1;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: -22px 22px 22px -22px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  z-index: -2;
+  opacity: 0.6;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* Elegant restrained hover float (respects prefers-reduced-motion) */
+@media (prefers-reduced-motion: no-preference) {
+  .portrait-frame:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 35px 65px -25px rgba(22, 32, 51, 0.42);
+  }
+  .portrait-frame:hover img {
+    transform: rotate(0.5deg);
+  }
+  .portrait-frame:hover::before {
+    transform: translate(3px, 3px);
+  }
+  .portrait-frame:hover::after {
+    transform: translate(-3px, -3px);
+  }
+}
+
+.about p {
+  font-size: 1.08rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+
+.about p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.cred {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.cred .badge {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.06rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.cred .sep {
+  color: var(--line);
+}
+
+.signoff {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.45rem;
+  margin-top: 32px;
+  color: var(--ink);
+}
+
+/* ---------- FAQ (Consistent with Visual Reference) ---------- */
+.faq {
+  background: transparent;
+  border-top: 1px solid var(--line);
+}
+
+.faq-list {
+  max-width: 820px;
+  margin-top: 50px;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 4px;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: color 0.3s;
+}
+
+.faq-q:hover {
+  color: var(--gold);
+}
+
+.faq-q .pm {
+  font-size: 1.5rem;
+  color: var(--gold);
+  transition: transform 0.3s;
+  font-family: var(--sans);
+  font-weight: 300;
+}
+
+.faq-item.open .pm {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-a p {
+  padding: 0 4px 30px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  max-width: 68ch;
+}
+
+/* ---------- FINAL CTA ---------- */
+.final {
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.final::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(700px 460px at 50% 0%, rgba(182, 141, 64, 0.15), transparent 62%);
+}
+
+.final .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.final h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  line-height: 1.1;
+  max-width: 18ch;
+  margin: 0 auto 24px;
+  color: var(--cream);
+}
+
+.final h2 em {
+  font-style: italic;
+  color: var(--gold-soft);
+}
+
+.final p {
+  font-size: 1.15rem;
+  font-family: var(--sans);
+  font-weight: 300;
+  color: rgba(250, 246, 239, 0.8);
+  max-width: 48ch;
+  margin: 0 auto 42px;
+  line-height: 1.7;
+}
+
+.final .btn-primary {
+  margin: 0 auto;
+}
+
+.final .micro {
+  margin-top: 24px;
+  font-size: 0.88rem;
+  color: rgba(250, 246, 239, 0.45);
+  letter-spacing: 0.05em;
+  font-family: var(--sans);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--ink-deep);
+  color: rgba(250, 246, 239, 0.55);
+  padding: 50px 0;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(216, 205, 184, 0.08);
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.foot-brand {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--cream);
+}
+
+.foot-brand .dot {
+  color: var(--gold-soft);
+}
+
+.foot-links {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.foot-links a {
+  color: rgba(250, 246, 239, 0.6);
+  text-decoration: none;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  transition: color 0.25s;
+  letter-spacing: 0.05em;
+}
+
+.foot-links a:hover {
+  color: var(--gold-soft);
+}
+
+.foot-fine {
+  font-size: 0.8rem;
+  font-family: var(--sans);
+  color: rgba(250, 246, 239, 0.35);
+  width: 100%;
+  border-top: 1px solid rgba(250, 246, 239, 0.08);
+  padding-top: 24px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-eyebrow, .hero h1, .hero-actions, .scroll-hint {
+    animation: none;
+    opacity: 1;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Minimalist Floating Header Navigation -->
+<header class="site-header">
+  <div class="header-container">
+    <a href="#" class="logo" id="header-logo-link">
+      <span class="logo-serif">Miraz</span> <span class="logo-sans">Mentors</span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#how" class="nav-link" id="nav-model-link">The Model</a>
+      <a href="#services" class="nav-link" id="nav-services-link">Services</a>
+      <a href="#about" class="nav-link" id="nav-about-link">Your Mentor</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRdKo-xU5BMQUUrWLnGfhw4Zheixrhl3XvlQOpE4dVat0g1Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="nav-cta" id="nav-cta-link">Evaluate Profile</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <canvas id="sparkles"></canvas>
+
+  <div class="hero-center">
+    <div class="hero-eyebrow">Global PhD &amp; Masters Admissions for the selective few</div>
+    <h1>Miraz Mentors</h1>
+    <div class="hero-actions" style="margin-top: 15px;">
+      <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfRdKo-xU5BMQUUrWLnGfhw4Zheixrhl3XvlQOpE4dVat0g1Q/viewform?usp=header" target="_blank" rel="noopener">
+        Get Your Consultation
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn-ghost" href="#how">How it works</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">Scroll to explore<span class="arrow"></span></div>
+</header>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="how pad">
+  <div class="wrap">
+    <div class="how-head reveal">
+      <span class="sec-eyebrow">How It Works</span>
+      <h2 class="sec-title">Three steps from <em>application</em> to acceptance.</h2>
+      <p class="sec-intro">A calm, deliberate process — because rushing an application is how good candidates end up with generic ones.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="sn">STEP 01</div>
+        <h4>You apply</h4>
+        <p>Fill in a short questionnaire about your background, target programs, and what you need. It takes a few minutes and tells me whether I’m the right fit for you.</p>
+      </div>
+      <div class="step reveal">
+        <div class="sn">STEP 02</div>
+        <h4>We map the strategy</h4>
+        <p>If there’s a seat and we’re a match, we talk through your profile, shortlist programs, and agree on exactly what to write and in what order.</p>
+      </div>
+      <div class="step reveal">
+        <div class="sn">STEP 03</div>
+        <h4>We draft &amp; refine</h4>
+        <p>I write, you respond, we iterate — until every document is sharp, honest, and unmistakably yours. Then you submit with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section id="approach" class="approach pad">
+  <div class="wrap approach-grid">
+    <div class="reveal">
+      <span class="sec-eyebrow">The Approach</span>
+      <h2 class="sec-title">Attention doesn’t <em>scale</em>. So I don’t try.</h2>
+      <p class="sec-intro">Large agencies process hundreds of students at once. Your statement of purpose gets a template and a junior editor. I built this practice to be the opposite of that.</p>
+      <div class="approach-points">
+        <div class="point"><div class="pn">01</div><div><h4>You work directly with me</h4><p>No handoffs, no rotating staff. The person who reads your draft is the person who writes the strategy.</p></div></div>
+        <div class="point"><div class="pn">02</div><div><h4>Built around your profile</h4><p>Every document is tailored to your field, your target programs, and the specific faculty you want to work with.</p></div></div>
+        <div class="point"><div class="pn">03</div><div><h4>Capped on purpose</h4><p>Five at a time means I can answer your messages, iterate on drafts, and actually care about the outcome.</p></div></div>
+      </div>
+    </div>
+    <div class="approach-card reveal">
+      <div class="big">5<bold>only</bold></div>
+      <div class="cap">applicants per cycle</div>
+      <p class="desc">Since leaving SI-UK, I’ve worked with small, hand-picked groups — never more than five at once. Each of them reached a destination they were genuinely aiming for. That track record exists <em>because</em> the number stays small, not in spite of it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHILOSOPHY (Where Feature Writing Meets Academic Rigor) ============ -->
+<section id="philosophy" class="philosophy pad">
+  <div class="wrap">
+    <div class="philosophy-card reveal">
+      <div class="philosophy-icon" aria-hidden="true">✒️</div>
+      <h3 class="philosophy-title">Where Feature Writing Meets Academic Rigor</h3>
+      <p class="philosophy-body">
+        Admissions committees at Ivy League and top-tier global institutions review thousands of formulaic statements. We discard templates. With an <strong>English degree from Dhaka University</strong> and a background of publishing <strong>over 200 feature articles for national and international media</strong>, I understand the absolute craft of storytelling.
+      </p>
+      <p class="philosophy-body">
+        We translate your raw research projects, academic achievements, and career goals into a cohesive, intellectually electrifying narrative that commands the committee’s attention from the very first paragraph.
+      </p>
+      <div class="philosophy-action">
+        <a href="https://mirazhossain.com/writing/" target="_blank" rel="noopener noreferrer" class="philosophy-link" id="philosophy-writing-link">
+          Explore Selected Writings
+          <span class="link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="services pad">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <span class="sec-eyebrow">What I Write</span>
+      <h2 class="sec-title">Every document that gets you <em>read</em>.</h2>
+      <p class="sec-intro">The writing that admissions committees, professors, and scholarship panels actually judge you on — crafted, not templated.</p>
+    </div>
+    <div class="svc-grid reveal">
+      
+      <!-- Card 1 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">01.</span>
+          <h3>University Shortlisting</h3>
+        </div>
+        <p>A categorised list — reach, match, and safe — built around your research interests, funding needs, and goals.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">15 Programs</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Faculty Fit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">02.</span>
+          <h3>Statement of Purpose</h3>
+        </div>
+        <p>A real SOP with a genuine hook, clear research fit, and a logical thread from your past to your future.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">1000w Essay</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Academic Hook</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">03.</span>
+          <h3>Research Proposals</h3>
+        </div>
+        <p>Structured, methodologically specific, and aligned with your supervisor’s research strengths.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">5-Page Spec</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Methodology</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">04.</span>
+          <h3>Motivation Letters</h3>
+        </div>
+        <p>Reflective, personal, and pointed — built for European programs and scholarship applications.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">Custom Cover</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Scholarship</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">05.</span>
+          <h3>LOR Drafts</h3>
+        </div>
+        <p>Recommendation drafts written in your recommender’s voice, ready for them to personalise and sign.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">3 Letter Set</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Voice Map</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">06.</span>
+          <h3>Cold Emails</h3>
+        </div>
+        <p>Under-200-word outreach that shows you’ve read their work — the kind supervisors actually reply to.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">3 Templates</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Paper Hook</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">07.</span>
+          <h3>Academic CV</h3>
+        </div>
+        <p>A research-forward CV that foregrounds publications, projects, and the experience that matters.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">LaTeX File</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Publications</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">08.</span>
+          <h3>Scholarship Essays</h3>
+        </div>
+        <p>Essays built around a funder’s specific values — financial need handled with dignity, never desperation.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">Target Essays</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Merit-Need</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="svc-card">
+        <div class="svc-card-header">
+          <span class="svc-num">09.</span>
+          <h3>Profile Strategy</h3>
+        </div>
+        <p>An honest read on your strengths and gaps — and what to fix before you apply, while there’s still time.</p>
+        <div class="svc-spec-box">
+          <div class="spec-line">
+            <span class="spec-label">Deliverable</span>
+            <span class="spec-value">Audit Brief</span>
+          </div>
+          <div class="spec-line">
+            <span class="spec-label">Focus</span>
+            <span class="spec-value">Panel Preview</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="svc-note reveal"><strong>A note on scope:</strong> I handle the academic writing and university selection. <span class="scope-warning">I don’t do</span> visa guidance, test prep, or form submission — that keeps my attention where it counts.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT (MEET YOUR MENTOR) ============ -->
+<section id="about" class="about pad">
+  <div class="wrap about-grid">
+    <div class="about-text-main reveal">
+      <span class="sec-eyebrow">Meet Your Mentor</span>
+      <h2 class="sec-title">Miraz</h2>
+      <p style="font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--gold); margin-bottom: 22px;">A scholar’s strategist, academic counselor, and professional storyteller.</p>
+      
+      <p>I am <strong>Md. Miraz Hossain</strong>. With an <strong>English degree from Dhaka University</strong> and professional experience publishing <strong>over 200 feature articles for national and international media</strong>, I bridge the gap between dry academic facts and captivating human narratives. My work ensures your statement commands attention at institutions like Harvard, Oxford, Stanford, Cambridge, and other world-class research centers.</p>
+      
+      <p>Before launching this private practice, I spent a year as an Education Counsellor at <strong>SI-UK Bangladesh</strong>, guiding students through admissions and scholarships. High-volume consulting often compromises custom quality. Capping our intake at <strong>five clients per cycle</strong> ensures that your writing strategy gets my complete, undivided attention.</p>
+    </div>
+    <div class="portrait-frame reveal">
+      <img src="assets/portrait.png" alt="Miraz - Founder of Miraz Mentors" width="400" height="267" loading="lazy">
+    </div>
+    <div class="about-extended reveal">
+      <p>When you work with me, you’re not a file in a high-volume agency queue. You’re one of five.</p>
+      
+      <div class="cred">
+        <span class="badge">Former Counsellor, SI-UK Bangladesh</span>
+        <span class="sep">·</span>
+        <span class="badge">Dhaka University Alumnus</span>
+        <span class="sep">·</span>
+        <span class="badge">Graduate Admissions Specialist</span>
+      </div>
+      <p class="signoff">— Miraz</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="faq pad">
+  <div class="wrap">
+    <span class="sec-eyebrow">Questions</span>
+    <h2 class="sec-title">The things people <em>ask</em> first.</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">Why only five applicants at a time?<span class="pm">+</span></button><div class="faq-a"><p>Because genuine attention can’t be mass-produced. A strong application takes back-and-forth, real edits, and someone who remembers your story. Capping the number is the only way I can promise that to everyone I take on.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What exactly do you write for me?<span class="pm">+</span></button><div class="faq-a"><p>Statements of purpose, research proposals, motivation letters, recommendation-letter drafts, cold emails to professors, academic CVs, and scholarship essays — plus university shortlisting and honest profile feedback. Essentially, the writing your application is judged on.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you handle visas, test prep, or submitting forms?<span class="pm">+</span></button><div class="faq-a"><p>No — and that’s deliberate. I focus on academic writing and university selection so my attention stays where it makes the biggest difference to your chances. I’m happy to point you toward trusted help for the rest.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Which countries and degrees do you cover?<span class="pm">+</span></button><div class="faq-a"><p>Primarily PhD and Masters applications to the USA, UK, and Europe, with occasional applications to other regions. For PhD candidates, I put particular weight on supervisor and lab fit over raw university ranking.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How do I start?<span class="pm">+</span></button><div class="faq-a"><p>Click “Get Your Consultation” and fill in the short questionnaire. If a seat is open and we’re a good match, I’ll reach out to set up our first conversation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final pad">
+  <div class="wrap">
+    <h2>One of <em>five</em>. Not one of five hundred.</h2>
+    <p>If you’re serious about your application, take a few minutes to apply. Seats are limited by design.</p>
+    <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfRdKo-xU5BMQUUrWLnGfhw4Zheixrhl3XvlQOpE4dVat0g1Q/viewform?usp=header" target="_blank" rel="noopener">
+      Get Your Consultation
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <p class="micro">Takes ~5 minutes · No obligation · I’ll only reach out if it’s a fit</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">Miraz Mentors<span class="dot">.</span></div>
+    <div class="foot-links">
+      <a href="#how">How it works</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRdKo-xU5BMQUUrWLnGfhw4Zheixrhl3XvlQOpE4dVat0g1Q/viewform?usp=header" target="_blank" rel="noopener">Contact</a>
+      <a href="https://www.facebook.com/MirazMentors/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <div class="foot-fine">© <span id="yr"></span> Miraz Mentors · Graduate admissions writing &amp; university selection. Independent practice — not affiliated with SI-UK or any agency.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- FAQ accordion ---------- */
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=q.parentElement, a=item.querySelector('.faq-a'), open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+/* ---------- scroll reveal ---------- */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* ---------- floating header scroll listener ---------- */
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.site-header');
+  if (header) {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+}, { passive: true });
+
+/* ---------- sparkle particle hero (vanilla canvas, no deps) ---------- */
+(function(){
+  var canvas=document.getElementById('sparkles');
+  if(!canvas) return;
+  var ctx=canvas.getContext('2d');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dpr=Math.min(window.devicePixelRatio||1,2);
+  var particles=[], W=0, H=0;
+
+  function size(){
+    var r=canvas.parentElement.getBoundingClientRect();
+    W=r.width; H=r.height;
+    canvas.width=W*dpr; canvas.height=H*dpr;
+    canvas.style.width=W+'px'; canvas.style.height=H+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    seed();
+  }
+  function seed(){
+    // density scales with area; capped for performance (Oxford quiet sky)
+    var count=Math.min(80, Math.round(W*H/15000));
+    particles=[];
+    for(var i=0;i<count;i++){
+      particles.push({
+        x:Math.random()*W,
+        y:Math.random()*H,
+        r:Math.random()*1.3+0.35,
+        baseA:Math.random()*0.45+0.1,
+        a:Math.random(),
+        tw:Math.random()*0.01+0.003,   // slow elegant twinkle speed
+        dir:Math.random()<0.5?1:-1,
+        vy:-(Math.random()*0.1+0.02),  // extremely slow elegant drift
+        vx:(Math.random()-0.5)*0.08,
+        gold:Math.random()<0.20          // ~20% are warm gold sparkles
+      });
+    }
+  }
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<particles.length;i++){
+      var p=particles[i];
+      p.a+=p.tw*p.dir;
+      if(p.a>1){p.a=1;p.dir=-1;} else if(p.a<0.1){p.a=0.1;p.dir=1;}
+      if(!reduce){
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.y<-4){p.y=H+4;p.x=Math.random()*W;}
+        if(p.x<-4)p.x=W+4; else if(p.x>W+4)p.x=-4;
+      }
+      var alpha=p.baseA*p.a;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.gold
+        ? 'rgba(182,141,64,'+alpha+')'
+        : 'rgba(250,246,239,'+alpha+')';
+      ctx.fill();
+    }
+    requestAnimationFrame(frame);
+  }
+  size();
+  window.addEventListener('resize',size);
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
