@@ -11,7 +11,7 @@
 <meta name="keywords" content="PhD admissions, Masters admissions, SOP writing, Ivy League strategy, graduate school consultancy, Dhaka University English, Md. Miraz Hossain">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22serif%22 fill=%22%23162033%22>M</text></svg>">
+<link rel="icon" type="image/png" href="assets/MirazMentors_profile_circle_navy.png">
 
 <!-- Google Fonts — Cormorant Garamond (Serif) & Manrope (Sans Body/UI) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,34 +100,28 @@ body {
   justify-content: space-between;
 }
 
-.logo {
+.logo-wrapper {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 1.35rem;
-  letter-spacing: 0.05em;
-  color: var(--cream);
-  transition: color 0.3s ease;
+  height: 100%;
 }
 
-.site-header.scrolled .logo {
-  color: var(--ink);
+.logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+  transition: var(--transition);
 }
 
-.logo-serif {
-  font-family: var(--serif);
-  font-weight: 500;
+.site-header:not(.scrolled):not(.menu-open) .logo-img {
+  /* Invert color to white/paper on dark unscrolled background */
+  filter: brightness(0) invert(1);
 }
 
-.logo-sans {
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  color: var(--gold-soft);
-  letter-spacing: 0.15em;
-}
-
-.site-header.scrolled .logo-sans {
-  color: var(--gold);
+.site-header.scrolled .logo-img,
+.site-header.menu-open .logo-img {
+  filter: none;
 }
 
 .desktop-nav {
@@ -298,12 +292,8 @@ body {
     border-bottom: 1px solid var(--line);
   }
 
-  .site-header .logo {
-    color: var(--ink);
-  }
-
-  .site-header .logo-sans {
-    color: var(--gold);
+  .logo-img {
+    filter: none !important;
   }
 
   .mobile-menu-toggle {
@@ -813,10 +803,17 @@ section {
   border-radius: 4px 4px 0 0;
 }
 
-.philosophy-icon {
-  font-size: 2.25rem;
-  margin-bottom: 18px;
+.philosophy-brand-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
   display: inline-block;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.philosophy-card:hover .philosophy-brand-icon {
+  transform: scale(1.08) rotate(3deg);
 }
 
 .philosophy-title {
@@ -1345,6 +1342,23 @@ footer .wrap {
   flex-wrap: wrap;
 }
 
+.foot-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.foot-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.foot-brand-wrapper:hover .foot-logo-img {
+  transform: rotate(-5deg) scale(1.05);
+}
+
 .foot-brand {
   font-family: var(--serif);
   font-size: 1.2rem;
@@ -1415,8 +1429,8 @@ footer .wrap {
 <!-- Minimalist Floating Header Navigation -->
 <header class="site-header">
   <div class="header-container">
-    <a href="#" class="logo" id="header-logo-link">
-      <span class="logo-serif">Miraz</span> <span class="logo-sans">Mentors</span>
+    <a href="#" class="logo-wrapper" id="header-logo-link" aria-label="Miraz Mentors Home">
+      <img src="assets/MirazMentors_wordmark_horizontal.png" alt="Miraz Mentors" class="logo-img">
     </a>
     <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
       <span></span>
@@ -1503,7 +1517,7 @@ footer .wrap {
 <section id="philosophy" class="philosophy pad">
   <div class="wrap">
     <div class="philosophy-card reveal">
-      <div class="philosophy-icon" aria-hidden="true">✒️</div>
+      <img src="assets/MirazMentors_profile_circle_navy.png" alt="Miraz Mentors Icon" class="philosophy-brand-icon">
       <h3 class="philosophy-title">Where Feature Writing Meets Academic Rigor</h3>
       <p class="philosophy-body">
         Admissions committees at Ivy League and top-tier global institutions review thousands of formulaic statements. I discard templates. With an <strong>English degree from Dhaka University</strong> and a background of publishing <strong>over 200 feature articles for national and international media</strong>, I understand the absolute craft of storytelling.
@@ -1967,7 +1981,10 @@ footer .wrap {
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
-    <div class="foot-brand">Miraz Mentors<span class="dot">.</span></div>
+    <div class="foot-brand-wrapper">
+      <img src="assets/MirazMentors_lockup_square_paper.png" alt="Miraz Mentors" class="foot-logo-img">
+      <div class="foot-brand">Miraz Mentors<span class="dot">.</span></div>
+    </div>
     <div class="foot-links">
       <a href="#how">How it works</a>
       <a href="#services">Services</a>
