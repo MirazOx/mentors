@@ -16,13 +16,13 @@
 <!-- Google Fonts — Cormorant Garamond (Serif) & Manrope (Sans Body/UI) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,300;1,7..72,400;1,7..72,500;1,7..72,600;1,7..72,700&display=swap" rel="stylesheet">
 
 <style>
 /* Oxford Desk / Quiet Academic Color System */
 :root {
-  --ink: #162033;
-  --ink-deep: #0F1922;
+  --ink: #0a0a0c;
+  --ink-deep: #050505;
   --ink-soft: #5D6678;
   --paper: #F5F6F8; /* premium cool-slate alabaster */
   --paper-warm: #EBECEF; /* structures and panels */
@@ -32,8 +32,8 @@
   --green: #31572C;
   --line: rgba(22, 32, 51, 0.08); /* clean, soft dividers */
   
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Manrope', system-ui, sans-serif;
+  --serif: 'Literata', Georgia, serif;
+  --sans: 'JetBrains Mono', Courier, monospace;
   
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -56,11 +56,11 @@ html {
 
 body {
   font-family: var(--sans);
-  background: linear-gradient(135deg, #E4E8EB 0%, #F5F6F8 50%, #E9ECF0 100%);
+  background: #F5F6F8;
   background-attachment: fixed;
   color: var(--ink);
   line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   overflow-x: hidden;
   font-weight: 400;
 }
@@ -84,9 +84,9 @@ body {
 
 .site-header.scrolled {
   background-color: rgba(245, 246, 248, 0.97); /* var(--paper) with premium glassmorphism */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+  
+  
+  border-bottom: 2px solid var(--ink);
   height: 70px;
 }
 
@@ -237,7 +237,7 @@ body {
   color: var(--cream);
   border: 1px solid rgba(250, 246, 239, 0.25);
   padding: 0.65rem 1.4rem;
-  border-radius: 2px;
+  border-radius: 0;
   transition: var(--transition);
 }
 
@@ -292,9 +292,9 @@ body {
   .site-header.scrolled,
   .site-header.menu-open {
     background-color: rgba(245, 246, 248, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
+    
+    
+    border-bottom: 2px solid var(--ink);
   }
 
   .logo-img {
@@ -323,8 +323,8 @@ body {
     gap: 0;
     padding: 0.9rem 28px 1.2rem;
     background-color: rgba(245, 246, 248, 0.98);
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 18px 40px rgba(15, 25, 34, 0.12);
+    border-bottom: 2px solid var(--ink);
+    box-shadow: none;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-12px);
@@ -341,7 +341,7 @@ body {
   .site-header.scrolled .nav-link {
     color: var(--ink-soft);
     padding: 0.95rem 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 2px solid var(--ink);
   }
 
   .nav-link:hover,
@@ -458,7 +458,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   padding: 18px 36px;
-  border-radius: 2px;
+  border-radius: 0;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
   border: 1px solid var(--gold);
@@ -489,7 +489,7 @@ body {
   font-weight: 500;
   padding: 17px 26px;
   border: 1px solid rgba(250, 246, 239, 0.22);
-  border-radius: 2px;
+  border-radius: 0;
   transition: border-color 0.3s, color 0.3s, background 0.3s;
 }
 
@@ -685,10 +685,10 @@ section {
   font-family: var(--serif);
   font-size: 1.15rem;
   color: var(--gold);
-  border: 1px solid var(--line);
+  border: 2px solid var(--ink);
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -715,13 +715,12 @@ section {
 .approach-card {
   background: rgba(15, 25, 34, 0.85); /* dark frosted glass */
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   color: var(--cream);
   padding: 56px 48px;
-  border-radius: 4px;
+  border-radius: 0;
   position: relative;
-  box-shadow: 0 30px 70px -30px rgba(15, 25, 34, 0.5),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: none;
   border: 1px solid rgba(139, 30, 47, 0.35); /* thin crimson border */
 }
 
@@ -773,13 +772,12 @@ section {
 .philosophy-card {
   background: rgba(255, 255, 255, 0.78); /* light frosted glass pane */
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   color: var(--ink);
   padding: 64px 52px;
-  border-radius: 6px;
+  border-radius: 0;
   text-align: center;
-  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.25), 
-              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: none;
   max-width: 960px;
   margin: 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -792,8 +790,7 @@ section {
 .philosophy-card:hover {
   background: rgba(255, 255, 255, 0.88);
   transform: translateY(-8px);
-  box-shadow: 0 40px 80px -25px rgba(0, 0, 0, 0.35), 
-              inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  box-shadow: none;
   border-color: rgba(255, 255, 255, 0.75);
 }
 
@@ -806,7 +803,7 @@ section {
   right: 0;
   height: 4px;
   background-color: var(--green);
-  border-radius: 4px 4px 0 0;
+  border-radius: 0;
 }
 
 .philosophy-brand-icon {
@@ -859,7 +856,7 @@ section {
   text-transform: uppercase;
   color: var(--gold);
   text-decoration: none;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid var(--ink);
   padding-bottom: 6px;
   transition: var(--transition);
 }
@@ -900,10 +897,10 @@ section {
 /* Glassmorphic card design representing academic prospectus sheet */
 .svc-card {
   background: rgba(235, 236, 239, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  
+  
   border: 1px solid rgba(22, 32, 51, 0.04);
-  border-radius: 4px;
+  border-radius: 0;
   padding: 40px 34px 34px 34px;
   display: flex;
   flex-direction: column;
@@ -915,7 +912,7 @@ section {
               border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 15px 35px -15px rgba(22, 32, 51, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: none;
 }
 
 /* Scholarly top accent border that expands outwards from the center on hover */
@@ -938,7 +935,7 @@ section {
 .svc-card:hover {
   background-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-8px);
-  box-shadow: 0 30px 60px -25px rgba(22, 32, 51, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: none;
   border-color: rgba(139, 30, 47, 0.15);
 }
 
@@ -987,7 +984,7 @@ section {
 .svc-spec-box {
   background: rgba(22, 32, 51, 0.03);
   border: 1px solid rgba(22, 32, 51, 0.05);
-  border-radius: 3px;
+  border-radius: 0;
   padding: 12px 16px;
   margin-top: auto;
   opacity: 0.7;
@@ -1037,7 +1034,7 @@ section {
   background-color: rgba(139, 30, 47, 0.03); /* soft crimson tint */
   border-left: 3px solid var(--gold); /* prestigious crimson indicator */
   padding: 22px 28px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0;
   line-height: 1.65;
 }
 
@@ -1113,11 +1110,11 @@ section {
 
 .portrait-frame img {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0;
   display: block;
   filter: saturate(0.9) contrast(1.01);
-  box-shadow: 0 25px 50px -20px rgba(22, 32, 51, 0.3);
-  border: 1px solid var(--line);
+  box-shadow: none;
+  border: 2px solid var(--ink);
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
 }
@@ -1128,7 +1125,7 @@ section {
   position: absolute;
   inset: -14px 14px 14px -14px;
   border: 1px solid var(--gold);
-  border-radius: 4px;
+  border-radius: 0;
   z-index: -1;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
@@ -1139,7 +1136,7 @@ section {
   position: absolute;
   inset: -22px 22px 22px -22px;
   border: 1px solid var(--green);
-  border-radius: 4px;
+  border-radius: 0;
   z-index: -2;
   opacity: 0.6;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1150,7 +1147,7 @@ section {
 @media (prefers-reduced-motion: no-preference) {
   .portrait-frame:hover {
     transform: translateY(-10px) scale(1.01);
-    box-shadow: 0 35px 65px -25px rgba(22, 32, 51, 0.42);
+    box-shadow: none;
   }
   .portrait-frame:hover img {
     transform: rotate(0.5deg);
@@ -1219,7 +1216,7 @@ section {
 }
 
 .faq-item {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid var(--ink);
 }
 
 .faq-q {
@@ -1738,7 +1735,7 @@ footer .wrap {
     </div>
     <!-- Smallest Entry Offer -->
     <div class="svc-card reveal" style="margin-bottom: 42px; border: 1px solid var(--gold); background: rgba(255,255,255,0.72); min-height: auto;">
-      <div style="position: absolute; top: 18px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--gold); padding: 6px 10px; border-radius: 2px; font-weight: 700;">
+      <div style="position: absolute; top: 18px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--gold); padding: 6px 10px; border-radius: 0; font-weight: 700;">
         Start Here
       </div>
       <div class="svc-card-header">
@@ -1794,7 +1791,7 @@ footer .wrap {
       </div>
       <!-- Package 2 - Featured -->
       <div class="svc-card" style="border: 1px solid var(--gold); background: rgba(255,255,255,0.68);">
-        <div style="position: absolute; top: 18px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--gold); padding: 6px 10px; border-radius: 2px; font-weight: 700;">
+        <div style="position: absolute; top: 18px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--gold); padding: 6px 10px; border-radius: 0; font-weight: 700;">
           Most Popular
         </div>
         <div class="svc-card-header">
@@ -1851,46 +1848,46 @@ footer .wrap {
     <div class="svc-note reveal" style="margin-top: 48px;">
       <strong>Individual services are also available:</strong>
       <div style="margin-top: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; font-size: 0.95rem; color: var(--ink-soft);">
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>SOP / Personal Statement</span>
           <strong style="color: var(--ink);">৳10,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>Academic CV — Full Draft</span>
           <strong style="color: var(--ink);">৳2,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>Academic CV — Editing</span>
           <strong style="color: var(--ink);">৳1,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>Research Proposal</span>
           <strong style="color: var(--ink);">৳20,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>Scholarship Essay</span>
           <strong style="color: var(--ink);">৳10,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>Cold Email Package</span>
           <strong style="color: var(--ink);">৳5,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>University Shortlisting</span>
           <strong style="color: var(--ink);">From ৳8,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>LOR Draft</span>
           <strong style="color: var(--ink);">৳5,000</strong>
         </div>
-        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; gap: 18px; border-bottom: 2px solid var(--ink); padding-bottom: 8px;">
           <span>Additional SOP Tailoring</span>
           <strong style="color: var(--ink);">৳2,000–৳3,000</strong>
         </div>
       </div>
     </div>
     <!-- Policy note -->
-    <p class="svc-note reveal" style="text-align: center; margin-top: 28px; border-left: none; border-right: 3px solid var(--gold); border-radius: 4px 0 0 4px;">
+    <p class="svc-note reveal" style="text-align: center; margin-top: 28px; border-left: none; border-right: 3px solid var(--gold); border-radius: 0;">
       <strong>Payment:</strong> 50% advance to begin work, 50% before final delivery.
       <br>
       <strong>Revision policy:</strong> Included revisions apply to the original brief. New universities, new prompts, or a major change in direction may require additional work.
@@ -1923,7 +1920,7 @@ footer .wrap {
       <div class="portrait-frame" style="max-width: none; width: 100%; justify-self: initial;">
         <img src="assets/portrait.png" alt="Miraz - Founder of Miraz Mentors" width="400" height="267" loading="lazy">
       </div>
-      <a href="mailto:miraz8395@gmail.com" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 14px 28px; background: var(--ink); color: var(--cream); text-decoration: none; font-family: var(--sans); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; transition: var(--transition); border: 1px solid var(--ink);" onmouseover="this.style.background='var(--gold)';this.style.borderColor='var(--gold)';this.style.color='var(--ink-deep)';" onmouseout="this.style.background='var(--ink)';this.style.borderColor='var(--ink)';this.style.color='var(--cream)';">
+      <a href="mailto:miraz8395@gmail.com" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 14px 28px; background: var(--ink); color: var(--cream); text-decoration: none; font-family: var(--sans); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 0; transition: var(--transition); border: 1px solid var(--ink);" onmouseover="this.style.background='var(--gold)';this.style.borderColor='var(--gold)';this.style.color='var(--ink-deep)';" onmouseout="this.style.background='var(--ink)';this.style.borderColor='var(--ink)';this.style.color='var(--cream)';">
         Reach Out
         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </a>
