@@ -9,58 +9,92 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,300;1,7..72,400;1,7..72,500;1,7..72,600;1,7..72,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"> <!-- We will extract some core styles to a CSS file or just inline them -->
 <style>
-  /* Core Variables */
+  /* Oxford Desk Premium System */
   :root {
     --ink: #162033;
     --ink-deep: #0F1922;
     --ink-soft: #5D6678;
     --paper: #F5F6F8;
     --paper-warm: #FFFFFF;
-    --cream: #FFFFFF;
     --gold: #8B1E2F;
+    --line: rgba(22, 32, 51, 0.15);
+    
     --serif: 'Literata', Georgia, serif;
     --sans: 'Public Sans', system-ui, sans-serif;
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  body { 
+    font-family: var(--sans); 
+    background: var(--paper); 
+    color: var(--ink); 
+    line-height: 1.6; 
+    -webkit-font-smoothing: antialiased; 
+    overflow-x: hidden;
+  }
   
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
   
   /* Header */
-  .site-header { padding: 30px 0; border-bottom: 1px solid rgba(22, 32, 51, 0.1); background: var(--paper-warm); }
+  .site-header { 
+    padding: 30px 0; 
+    border-bottom: 1px solid var(--line); 
+  }
   .header-nav { display: flex; justify-content: space-between; align-items: center; }
-  .logo-text { font-family: var(--serif); font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
-  .back-link { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: var(--transition); }
+  .logo-text { font-family: var(--serif); font-weight: 700; font-size: 1.25rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+  .back-link { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: var(--transition); }
   .back-link:hover { color: var(--ink); }
 
-  /* Hero */
-  .hero-section { padding: 100px 0 60px; text-align: center; }
-  .eyebrow { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 700; margin-bottom: 20px; background: rgba(139, 30, 47, 0.08); padding: 6px 12px; border-radius: 4px; }
-  .hero-section h1 { font-family: var(--serif); font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px; color: var(--ink-deep); }
-  .hero-section p { font-size: 1.25rem; color: var(--ink-soft); max-width: 700px; margin: 0 auto; line-height: 1.7; }
+  /* Hero Editorial */
+  .hero-section { padding: 120px 0 80px; }
+  .eyebrow { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); font-weight: 700; margin-bottom: 30px; border-bottom: 1px solid var(--gold); padding-bottom: 4px; }
+  .hero-section h1 { font-family: var(--serif); font-size: clamp(3.5rem, 8vw, 6rem); line-height: 1.05; letter-spacing: -0.03em; color: var(--ink-deep); margin-bottom: 40px; max-width: 900px; }
+  .hero-intro { font-size: 1.5rem; color: var(--ink-soft); font-family: var(--serif); font-style: italic; max-width: 700px; line-height: 1.5; }
 
-  /* Content Grid */
-  .content-section { padding: 60px 0 100px; }
-  .value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; }
-  .value-card h3 { font-family: var(--serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 16px; }
-  .value-card p { font-size: 1.05rem; color: var(--ink-soft); line-height: 1.7; }
+  /* The Manifesto */
+  .manifesto-section { padding: 80px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper-warm); }
+  .manifesto-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+  .manifesto-text p { font-size: 1.15rem; color: var(--ink); line-height: 1.8; margin-bottom: 24px; }
+  .manifesto-text p:last-child { margin-bottom: 0; }
+  
+  .manifesto-callout { border-left: 2px solid var(--gold); padding-left: 40px; }
+  .manifesto-callout h3 { font-family: var(--serif); font-size: 2rem; color: var(--gold); margin-bottom: 16px; line-height: 1.2; }
+  .manifesto-callout p { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.6; }
+
+  /* The Curriculum (Value Pillars) */
+  .curriculum-section { padding: 120px 0; }
+  .sec-title { font-family: var(--serif); font-size: 2.5rem; letter-spacing: -0.02em; margin-bottom: 60px; }
+  
+  .c-item { display: grid; grid-template-columns: 80px 1fr; gap: 40px; padding: 60px 0; border-top: 1px solid var(--line); }
+  .c-item:last-child { border-bottom: 1px solid var(--line); }
+  .c-num { font-family: var(--serif); font-size: 3.5rem; line-height: 0.8; color: var(--gold); font-weight: 300; font-style: italic; }
+  .c-content h3 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 16px; color: var(--ink-deep); }
+  .c-content p { font-size: 1.1rem; color: var(--ink-soft); line-height: 1.7; max-width: 700px; }
 
   /* Pitch Box */
-  .pitch-box { background: var(--ink); color: var(--paper); padding: 80px; border-radius: 12px; margin-top: 80px; text-align: center; box-shadow: 0 20px 40px rgba(15, 25, 34, 0.15); }
-  .pitch-box h2 { font-family: var(--serif); font-size: 2.5rem; margin-bottom: 24px; color: var(--paper); }
-  .pitch-box p { font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 40px; }
+  .pitch-section { padding: 0 0 120px; }
+  .pitch-box { background: var(--ink-deep); padding: 100px 80px; border-radius: 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; box-shadow: 0 24px 48px rgba(15, 25, 34, 0.15); position: relative; overflow: hidden; }
+  .pitch-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gold); }
   
-  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: var(--paper); padding: 18px 36px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: var(--transition); }
-  .btn-primary:hover { background: #6A1622; transform: translateY(-2px); }
+  .pitch-left h2 { font-family: var(--serif); font-size: 3rem; color: var(--paper); line-height: 1.1; margin-bottom: 24px; }
+  .pitch-left p { font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
+  
+  .pitch-right { text-align: center; background: rgba(255,255,255,0.03); padding: 60px 40px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; }
+  .pitch-price { display: flex; align-items: baseline; justify-content: center; margin-bottom: 30px; }
+  .pitch-price .currency { font-size: 2.5rem; color: var(--gold); margin-right: 4px; }
+  .pitch-price .amount { font-family: var(--serif); font-size: 4.5rem; color: var(--paper); line-height: 1; letter-spacing: -0.02em; }
+  .pitch-price .duration { font-size: 1.1rem; color: rgba(255,255,255,0.5); font-style: italic; margin-left: 8px; }
+  
+  .btn-primary { display: inline-flex; justify-content: center; align-items: center; background: var(--gold); color: var(--paper); padding: 18px 40px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1rem; letter-spacing: 0.05em; transition: var(--transition); border: 1px solid var(--gold); }
+  .btn-primary:hover { background: transparent; color: var(--gold); }
 
-  @media (max-width: 768px) {
-    .value-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero-section h1 { font-size: 2.5rem; }
-    .pitch-box { padding: 40px 24px; }
+  @media (max-width: 900px) {
+    .manifesto-grid, .pitch-box { grid-template-columns: 1fr; gap: 60px; }
+    .pitch-box { padding: 60px 40px; }
+    .c-item { grid-template-columns: 1fr; gap: 20px; padding: 40px 0; }
+    .c-num { font-size: 2.5rem; }
   }
 </style>
 </head>
@@ -74,62 +108,92 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero-section">
     <div class="wrap">
-      <span class="eyebrow">Limited to 10 Students per Year</span>
-      <h1>The Long Game:<br>Undergraduate Mentorship</h1>
-      <p>An Ivy League or top-tier global narrative isn't built in your final semester. It is meticulously crafted from year one.</p>
+      <span class="eyebrow">The Undergraduate Retainer</span>
+      <h1>An elite academic narrative isn't built in your final semester.</h1>
+      <p class="hero-intro">It is meticulously crafted from year one.</p>
     </div>
   </section>
 
-  <section class="content-section">
-    <div class="wrap">
-      
-      <div style="max-width: 800px; margin: 0 auto; font-size: 1.15rem; color: var(--ink); line-height: 1.8;">
-        <p style="margin-bottom: 24px;">Most students only start thinking about their Master's or PhD applications in their final year. By then, they are scrambling to piece together a coherent story out of scattered extracurriculars, inconsistent grades, and a lack of deep research experience. They realize too late that they don't actually know any of their professors well enough to ask for a strong recommendation letter.</p>
-        
-        <p><strong>The Undergraduate Retainer</strong> is my most exclusive offering. I work with exactly 10 undergraduate students on a yearly subscription basis. This is not casual advice; it is a rigorous, ongoing strategic partnership designed to build an elite academic profile from the ground up.</p>
+  <!-- THE MANIFESTO -->
+  <section class="manifesto-section">
+    <div class="wrap manifesto-grid">
+      <div class="manifesto-text">
+        <p>Most students only start thinking about their Master's or PhD applications in their final year. By then, they are scrambling to piece together a coherent story out of scattered extracurriculars, inconsistent grades, and a lack of deep research experience.</p>
+        <p>They realize too late that they don't actually know any of their professors well enough to ask for a genuinely strong recommendation letter.</p>
+        <p>This retainer is built to solve that. It is not casual advice; it is a rigorous, ongoing strategic partnership designed to build an undeniable academic profile from the ground up.</p>
       </div>
+      <div class="manifesto-callout">
+        <h3>10 Seats Only.</h3>
+        <p>I work with exactly 10 undergraduate students on a yearly subscription basis. Limiting the cohort ensures you receive my undivided, continuous strategic attention throughout your entire academic year.</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="value-grid">
-        <div class="value-card">
+  <!-- THE CURRICULUM -->
+  <section class="curriculum-section">
+    <div class="wrap">
+      <h2 class="sec-title">The Blueprint.</h2>
+      
+      <div class="c-item">
+        <div class="c-num">01</div>
+        <div class="c-content">
           <h3>Finding Your Authentic Niche</h3>
           <p>We explore your genuine interests early. I help you cut through the noise of what sounds "prestigious" and guide you toward a specialized academic niche that you are actually passionate about, giving your future applications a sharp, distinct focus.</p>
         </div>
-        
-        <div class="value-card">
+      </div>
+      
+      <div class="c-item">
+        <div class="c-num">02</div>
+        <div class="c-content">
           <h3>Mastering Academic Results</h3>
-          <p>Good grades are the baseline, but the transition to university-level academics trips up many brilliant students. We will identify your optimal learning style, restructure your study habits, and develop actionable points to get you out of any academic bottleneck immediately.</p>
+          <p>Good grades are the baseline, but the transition to university-level academics trips up many brilliant students. We will identify your optimal learning style, restructure your study habits, and develop actionable strategies to get you out of any academic bottleneck immediately.</p>
         </div>
+      </div>
 
-        <div class="value-card">
+      <div class="c-item">
+        <div class="c-num">03</div>
+        <div class="c-content">
           <h3>Building Faculty Rapport</h3>
-          <p>Strong Letters of Recommendation (LORs) are not earned by just getting an A in a class. They are earned through genuine academic relationships. I teach you exactly how to approach professors, ask the right questions, and secure undergraduate research assistantships.</p>
+          <p>Strong Letters of Recommendation (LORs) are not earned by just getting an A in a class. They are earned through genuine academic relationships. I teach you exactly how to approach professors, ask the right questions, and secure highly-coveted undergraduate research assistantships.</p>
         </div>
+      </div>
 
-        <div class="value-card">
+      <div class="c-item">
+        <div class="c-num">04</div>
+        <div class="c-content">
           <h3>Curating the Narrative</h3>
           <p>Every extracurricular, every summer project, and every elective you take should build toward a cohesive story. I keep you strictly on track, ensuring that by the time you are ready to apply for higher education, your profile is undeniable.</p>
         </div>
       </div>
 
-      <div class="pitch-box">
-        <h2>Commit to your trajectory.</h2>
-        <p>Currently, there are <strong>4 slots available</strong>. Intake is strictly limited to ensure you receive my continuous, undivided strategic attention throughout the academic year.</p>
-        
-        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: inline-block; padding: 20px 40px; border-radius: 8px; margin-bottom: 30px;">
-          <span style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-bottom: 8px;">Yearly Retainer</span>
-          <span style="font-size: 2rem; font-weight: 700; color: var(--paper); font-family: var(--serif);">৳1,00,000 <span style="font-size: 1rem; font-family: var(--sans); font-weight: 400; color: rgba(255,255,255,0.6);">/ year</span></span>
-        </div>
-        <br>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRdKo-xU5BMQUUrWLnGfhw4Zheixrhl3XvlQOpE4dVat0g1Q/viewform" target="_blank" rel="noopener" class="btn-primary">Apply for a Slot</a>
-      </div>
+    </div>
+  </section>
 
+  <!-- PITCH & PRICING -->
+  <section class="pitch-section">
+    <div class="wrap">
+      <div class="pitch-box">
+        <div class="pitch-left">
+          <h2>Commit to your trajectory.</h2>
+          <p>Currently, there are <strong>4 slots available</strong> for the upcoming cycle. Secure your seat to begin building your foundation.</p>
+        </div>
+        <div class="pitch-right">
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.4); margin-bottom: 20px;">Yearly Retainer</div>
+          <div class="pitch-price">
+            <span class="currency">৳</span>
+            <span class="amount">1,00,000</span>
+          </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRdKo-xU5BMQUUrWLnGfhw4Zheixrhl3XvlQOpE4dVat0g1Q/viewform" target="_blank" rel="noopener" class="btn-primary">Apply for a Slot</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
-<footer style="text-align: center; padding: 40px; border-top: 1px solid rgba(22, 32, 51, 0.1); margin-top: 60px; color: var(--ink-soft); font-size: 0.9rem;">
+<footer style="text-align: center; padding: 40px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.9rem; background: var(--paper-warm);">
   © 2026 Miraz Mentors. All rights reserved.
 </footer>
 
