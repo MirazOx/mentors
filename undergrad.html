@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Undergraduate Retainer — Miraz Mentors</title>
+<meta name="description" content="A premium, year-long academic mentorship for undergraduate students. Build your narrative from day one.">
+<link rel="icon" type="image/png" href="assets/MirazMentors_profile_circle_navy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,300;1,7..72,400;1,7..72,500;1,7..72,600;1,7..72,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"> <!-- We will extract some core styles to a CSS file or just inline them -->
+<style>
+  /* Core Variables */
+  :root {
+    --ink: #162033;
+    --ink-deep: #0F1922;
+    --ink-soft: #5D6678;
+    --paper: #F5F6F8;
+    --paper-warm: #FFFFFF;
+    --cream: #FFFFFF;
+    --gold: #8B1E2F;
+    --serif: 'Literata', Georgia, serif;
+    --sans: 'Public Sans', system-ui, sans-serif;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
+  
+  /* Header */
+  .site-header { padding: 30px 0; border-bottom: 1px solid rgba(22, 32, 51, 0.1); background: var(--paper-warm); }
+  .header-nav { display: flex; justify-content: space-between; align-items: center; }
+  .logo-text { font-family: var(--serif); font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+  .back-link { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: var(--transition); }
+  .back-link:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero-section { padding: 100px 0 60px; text-align: center; }
+  .eyebrow { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 700; margin-bottom: 20px; background: rgba(139, 30, 47, 0.08); padding: 6px 12px; border-radius: 4px; }
+  .hero-section h1 { font-family: var(--serif); font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px; color: var(--ink-deep); }
+  .hero-section p { font-size: 1.25rem; color: var(--ink-soft); max-width: 700px; margin: 0 auto; line-height: 1.7; }
+
+  /* Content Grid */
+  .content-section { padding: 60px 0 100px; }
+  .value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; }
+  .value-card h3 { font-family: var(--serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 16px; }
+  .value-card p { font-size: 1.05rem; color: var(--ink-soft); line-height: 1.7; }
+
+  /* Pitch Box */
+  .pitch-box { background: var(--ink); color: var(--paper); padding: 80px; border-radius: 12px; margin-top: 80px; text-align: center; box-shadow: 0 20px 40px rgba(15, 25, 34, 0.15); }
+  .pitch-box h2 { font-family: var(--serif); font-size: 2.5rem; margin-bottom: 24px; color: var(--paper); }
+  .pitch-box p { font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 40px; }
+  
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: var(--paper); padding: 18px 36px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: var(--transition); }
+  .btn-primary:hover { background: #6A1622; transform: translateY(-2px); }
+
+  @media (max-width: 768px) {
+    .value-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-section h1 { font-size: 2.5rem; }
+    .pitch-box { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-nav">
+    <a href="/" class="logo-text">Miraz Mentors.</a>
+    <a href="/" class="back-link">← Back to Main</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-section">
+    <div class="wrap">
+      <span class="eyebrow">Limited to 10 Students per Year</span>
+      <h1>The Long Game:<br>Undergraduate Mentorship</h1>
+      <p>An Ivy League or top-tier global narrative isn't built in your final semester. It is meticulously crafted from year one.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="wrap">
+      
+      <div style="max-width: 800px; margin: 0 auto; font-size: 1.15rem; color: var(--ink); line-height: 1.8;">
+        <p style="margin-bottom: 24px;">Most students only start thinking about their Master's or PhD applications in their final year. By then, they are scrambling to piece together a coherent story out of scattered extracurriculars, inconsistent grades, and a lack of deep research experience. They realize too late that they don't actually know any of their professors well enough to ask for a strong recommendation letter.</p>
+        
+        <p><strong>The Undergraduate Retainer</strong> is my most exclusive offering. I work with exactly 10 undergraduate students on a yearly subscription basis. This is not casual advice; it is a rigorous, ongoing strategic partnership designed to build an elite academic profile from the ground up.</p>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <h3>Finding Your Authentic Niche</h3>
+          <p>We explore your genuine interests early. I help you cut through the noise of what sounds "prestigious" and guide you toward a specialized academic niche that you are actually passionate about, giving your future applications a sharp, distinct focus.</p>
+        </div>
+        
+        <div class="value-card">
+          <h3>Mastering Academic Results</h3>
+          <p>Good grades are the baseline, but the transition to university-level academics trips up many brilliant students. We will identify your optimal learning style, restructure your study habits, and develop actionable points to get you out of any academic bottleneck immediately.</p>
+        </div>
+
+        <div class="value-card">
+          <h3>Building Faculty Rapport</h3>
+          <p>Strong Letters of Recommendation (LORs) are not earned by just getting an A in a class. They are earned through genuine academic relationships. I teach you exactly how to approach professors, ask the right questions, and secure undergraduate research assistantships.</p>
+        </div>
+
+        <div class="value-card">
+          <h3>Curating the Narrative</h3>
+          <p>Every extracurricular, every summer project, and every elective you take should build toward a cohesive story. I keep you strictly on track, ensuring that by the time you are ready to apply for higher education, your profile is undeniable.</p>
+        </div>
+      </div>
+
+      <div class="pitch-box">
+        <h2>Commit to your trajectory.</h2>
+        <p>Currently, there are <strong>4 slots available</strong>. Intake is strictly limited to ensure you receive my continuous, undivided strategic attention throughout the academic year.</p>
+        
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: inline-block; padding: 20px 40px; border-radius: 8px; margin-bottom: 30px;">
+          <span style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-bottom: 8px;">Yearly Retainer</span>
+          <span style="font-size: 2rem; font-weight: 700; color: var(--paper); font-family: var(--serif);">৳1,00,000 <span style="font-size: 1rem; font-family: var(--sans); font-weight: 400; color: rgba(255,255,255,0.6);">/ year</span></span>
+        </div>
+        <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRdKo-xU5BMQUUrWLnGfhw4Zheixrhl3XvlQOpE4dVat0g1Q/viewform" target="_blank" rel="noopener" class="btn-primary">Apply for a Slot</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer style="text-align: center; padding: 40px; border-top: 1px solid rgba(22, 32, 51, 0.1); margin-top: 60px; color: var(--ink-soft); font-size: 0.9rem;">
+  © 2026 Miraz Mentors. All rights reserved.
+</footer>
+
+</body>
+</html>

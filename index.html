@@ -16,13 +16,13 @@
 <!-- Google Fonts — Cormorant Garamond (Serif) & Manrope (Sans Body/UI) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,300;1,7..72,400;1,7..72,500;1,7..72,600;1,7..72,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,300;1,7..72,400;1,7..72,500;1,7..72,600;1,7..72,700&display=swap" rel="stylesheet">
 
 <style>
 /* Oxford Desk / Quiet Academic Color System */
 :root {
-  --ink: #0a0a0c;
-  --ink-deep: #050505;
+  --ink: #162033;
+  --ink-deep: #0F1922;
   --ink-soft: #5D6678;
   --paper: #F5F6F8; /* premium cool-slate alabaster */
   --paper-warm: #EBECEF; /* structures and panels */
@@ -33,7 +33,7 @@
   --line: rgba(22, 32, 51, 0.08); /* clean, soft dividers */
   
   --serif: 'Literata', Georgia, serif;
-  --sans: 'JetBrains Mono', Courier, monospace;
+  --sans: 'Public Sans', system-ui, sans-serif;
   
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -86,7 +86,7 @@ body {
   background-color: rgba(245, 246, 248, 0.97); /* var(--paper) with premium glassmorphism */
   
   
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid rgba(22, 32, 51, 0.1);
   height: 70px;
 }
 
@@ -141,7 +141,7 @@ body {
   width: 44px;
   height: 44px;
   border: 0;
-  border-radius: 0;
+  border-radius: 6px;
   background: transparent;
   color: var(--cream);
   cursor: pointer;
@@ -237,7 +237,7 @@ body {
   color: var(--cream);
   border: 1px solid rgba(250, 246, 239, 0.25);
   padding: 0.65rem 1.4rem;
-  border-radius: 0;
+  border-radius: 6px;
   transition: var(--transition);
 }
 
@@ -294,7 +294,7 @@ body {
     background-color: rgba(245, 246, 248, 0.97);
     
     
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 1px solid rgba(22, 32, 51, 0.1);
   }
 
   .logo-img {
@@ -323,7 +323,7 @@ body {
     gap: 0;
     padding: 0.9rem 28px 1.2rem;
     background-color: rgba(245, 246, 248, 0.98);
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 1px solid rgba(22, 32, 51, 0.1);
     box-shadow: none;
     opacity: 0;
     pointer-events: none;
@@ -341,7 +341,7 @@ body {
   .site-header.scrolled .nav-link {
     color: var(--ink-soft);
     padding: 0.95rem 0;
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 1px solid rgba(22, 32, 51, 0.1);
   }
 
   .nav-link:hover,
@@ -458,7 +458,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   padding: 18px 36px;
-  border-radius: 0;
+  border-radius: 6px;
   text-decoration: none;
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
   border: 1px solid var(--gold);
@@ -489,7 +489,7 @@ body {
   font-weight: 500;
   padding: 17px 26px;
   border: 1px solid rgba(250, 246, 239, 0.22);
-  border-radius: 0;
+  border-radius: 6px;
   transition: border-color 0.3s, color 0.3s, background 0.3s;
 }
 
@@ -685,10 +685,10 @@ section {
   font-family: var(--serif);
   font-size: 1.15rem;
   color: var(--gold);
-  border: 2px solid var(--ink);
+  border: 1px solid rgba(22, 32, 51, 0.15); border-radius: 6px;
   width: 48px;
   height: 48px;
-  border-radius: 0;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -718,7 +718,7 @@ section {
   backdrop-filter: blur(16px);
   color: var(--cream);
   padding: 56px 48px;
-  border-radius: 0;
+  border-radius: 6px;
   position: relative;
   box-shadow: none;
   border: 1px solid rgba(139, 30, 47, 0.35); /* thin crimson border */
@@ -775,7 +775,7 @@ section {
   backdrop-filter: blur(20px);
   color: var(--ink);
   padding: 64px 52px;
-  border-radius: 0;
+  border-radius: 6px;
   text-align: center;
   box-shadow: none;
   max-width: 960px;
@@ -803,7 +803,7 @@ section {
   right: 0;
   height: 4px;
   background-color: var(--green);
-  border-radius: 0;
+  border-radius: 6px;
 }
 
 .philosophy-brand-icon {
@@ -856,7 +856,7 @@ section {
   text-transform: uppercase;
   color: var(--gold);
   text-decoration: none;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid rgba(22, 32, 51, 0.1);
   padding-bottom: 6px;
   transition: var(--transition);
 }
@@ -900,7 +900,7 @@ section {
   
   
   border: 1px solid rgba(22, 32, 51, 0.04);
-  border-radius: 0;
+  border-radius: 6px;
   padding: 40px 34px 34px 34px;
   display: flex;
   flex-direction: column;
@@ -984,7 +984,7 @@ section {
 .svc-spec-box {
   background: rgba(22, 32, 51, 0.03);
   border: 1px solid rgba(22, 32, 51, 0.05);
-  border-radius: 0;
+  border-radius: 6px;
   padding: 12px 16px;
   margin-top: auto;
   opacity: 0.7;
@@ -1034,7 +1034,7 @@ section {
   background-color: rgba(139, 30, 47, 0.03); /* soft crimson tint */
   border-left: 3px solid var(--gold); /* prestigious crimson indicator */
   padding: 22px 28px;
-  border-radius: 0;
+  border-radius: 6px;
   line-height: 1.65;
 }
 
@@ -1110,11 +1110,11 @@ section {
 
 .portrait-frame img {
   width: 100%;
-  border-radius: 0;
+  border-radius: 6px;
   display: block;
   filter: saturate(0.9) contrast(1.01);
   box-shadow: none;
-  border: 2px solid var(--ink);
+  border: 1px solid rgba(22, 32, 51, 0.15); border-radius: 6px;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
 }
@@ -1125,7 +1125,7 @@ section {
   position: absolute;
   inset: -14px 14px 14px -14px;
   border: 1px solid var(--gold);
-  border-radius: 0;
+  border-radius: 6px;
   z-index: -1;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
@@ -1136,7 +1136,7 @@ section {
   position: absolute;
   inset: -22px 22px 22px -22px;
   border: 1px solid var(--green);
-  border-radius: 0;
+  border-radius: 6px;
   z-index: -2;
   opacity: 0.6;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1216,7 +1216,7 @@ section {
 }
 
 .faq-item {
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid rgba(22, 32, 51, 0.1);
 }
 
 .faq-q {
@@ -1725,7 +1725,7 @@ footer .wrap {
 
 
 <!-- ============ THREE PILLARS OF MENTORSHIP ============ -->
-<section id="pricing" class="pricing pad" style="background: var(--paper); border-top: 2px solid var(--ink);">
+<section id="pricing" class="pricing pad" style="background: var(--paper); border-top: 1px solid rgba(22, 32, 51, 0.1);">
   <div class="wrap">
     <div class="svc-head reveal">
       <span class="sec-eyebrow">The Mentorship Model</span>
@@ -1736,8 +1736,8 @@ footer .wrap {
     </div>
 
     <!-- Pillar 1 -->
-    <div class="svc-card reveal" style="margin-bottom: 42px; border: 2px solid var(--ink); background: var(--paper-warm); min-height: auto;">
-      <div style="position: absolute; top: -12px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--ink); padding: 6px 10px; font-weight: 700; border: 2px solid var(--ink);">
+    <div class="svc-card reveal" style="margin-bottom: 42px; border: 1px solid rgba(22, 32, 51, 0.15); border-radius: 6px; background: var(--paper-warm); min-height: auto;">
+      <div style="position: absolute; top: -12px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--ink); padding: 6px 10px; font-weight: 700; border: 1px solid rgba(22, 32, 51, 0.15); border-radius: 6px;">
         Step 01 / Mandatory Entry Point
       </div>
       <div class="svc-card-header">
@@ -1747,7 +1747,7 @@ footer .wrap {
       <p>
         Before we commit to long-term work, we start here. A deep-dive, one-on-one consultation where I assess your academic background, identify critical gaps, and provide specific, actionable guidelines on your next steps.
       </p>
-      <div class="svc-spec-box" style="background: var(--paper); border: 2px solid var(--ink); margin-top: 24px;">
+      <div class="svc-spec-box" style="background: var(--paper); border: 1px solid rgba(22, 32, 51, 0.15); border-radius: 6px; margin-top: 24px;">
         <div class="spec-line">
           <span class="spec-label">Session Fee</span>
           <span class="spec-value" style="color: var(--ink); font-weight: 700;">৳2,000</span>
@@ -1759,7 +1759,7 @@ footer .wrap {
       
       <!-- Pillar 2 -->
       <div class="svc-card" style="border: 2px solid var(--gold); background: var(--paper);">
-        <div style="position: absolute; top: -12px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--gold); padding: 6px 10px; font-weight: 700; border: 2px solid var(--ink);">
+        <div style="position: absolute; top: -12px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--gold); padding: 6px 10px; font-weight: 700; border: 1px solid rgba(22, 32, 51, 0.15); border-radius: 6px;">
           Strictly 5 Students Per Session
         </div>
         <div class="svc-card-header">
@@ -1777,35 +1777,24 @@ footer .wrap {
       </div>
 
       <!-- Pillar 3 -->
-      <div class="svc-card" style="border: 2px solid var(--ink); background: var(--ink); color: var(--paper);">
-        <div style="position: absolute; top: -12px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); background: var(--paper); padding: 6px 10px; font-weight: 700; border: 2px solid var(--ink);">
-          4 Slots Available (Capped at 10)
+      <div class="svc-card" style="border: 1px solid rgba(22, 32, 51, 0.15); background: var(--paper-warm); color: var(--ink);">
+        <div style="position: absolute; top: -12px; right: 18px; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--paper); background: var(--gold); padding: 6px 10px; font-weight: 700; border-radius: 4px;">
+          4 Slots Available
         </div>
         <div class="svc-card-header">
-          <span class="svc-num" style="color: rgba(255,255,255,0.3);">03.</span>
-          <h3 style="color: var(--paper);">The Undergraduate Retainer</h3>
+          <span class="svc-num" style="color: var(--ink-soft);">03.</span>
+          <h3 style="color: var(--ink);">The Undergraduate Retainer</h3>
         </div>
-        <p style="color: rgba(255,255,255,0.85);">
-          A premium, year-long mentorship designed to shape your entire academic trajectory from year one. We don't just apply to grad school; we build the foundation that makes top-tier universities want you.
+        <p style="color: var(--ink-soft); margin-bottom: 24px;">
+          A premium, year-long mentorship for undergraduate students. We don't just prepare you for grad school; we build the Ivy-League caliber narrative from year one. Overcome bottlenecks, find your niche, and master faculty rapport.
         </p>
-        <ul style="list-style: none; font-size: 0.88rem; color: rgba(255,255,255,0.7); margin-bottom: 24px; line-height: 1.8;">
-          <li>• Finding your authentic academic niche and research interests.</li>
-          <li>• Mastering learning styles to guarantee top undergraduate results.</li>
-          <li>• Learning the soft skills to build genuine rapport with professors.</li>
-          <li>• Real-time, actionable strategies to overcome any academic bottleneck.</li>
-        </ul>
-        <div class="svc-spec-box" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.2);">
-          <div class="spec-line">
-            <span class="spec-label" style="color: rgba(255,255,255,0.7);">Yearly Subscription</span>
-            <span class="spec-value" style="color: var(--paper); font-weight: 700;">৳1,00,000 / year</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
+        <a href="undergrad.html" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--gold); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease;">
+          Explore the Retainer <span>→</span>
+        </a>
+      </div>    </div>
 
     <!-- Policy note -->
-    <p class="svc-note reveal" style="text-align: center; margin-top: 48px; border-left: none; border-right: 3px solid var(--ink); border-radius: 0;">
+    <p class="svc-note reveal" style="text-align: center; margin-top: 48px; border-left: none; border-right: 3px solid var(--ink); border-radius: 6px;">
       <strong>Payment:</strong> 50% advance to begin work, 50% before final delivery.
       <br>
       <strong>Disclaimer:</strong> Miraz Mentors does not guarantee admission, scholarship, visa approval, or supervisor acceptance.
@@ -1836,7 +1825,7 @@ footer .wrap {
       <div class="portrait-frame" style="max-width: none; width: 100%; justify-self: initial;">
         <img src="assets/portrait.png" alt="Miraz - Founder of Miraz Mentors" width="400" height="267" loading="lazy">
       </div>
-      <a href="mailto:miraz8395@gmail.com" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 14px 28px; background: var(--ink); color: var(--cream); text-decoration: none; font-family: var(--sans); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 0; transition: var(--transition); border: 1px solid var(--ink);" onmouseover="this.style.background='var(--gold)';this.style.borderColor='var(--gold)';this.style.color='var(--ink-deep)';" onmouseout="this.style.background='var(--ink)';this.style.borderColor='var(--ink)';this.style.color='var(--cream)';">
+      <a href="mailto:miraz8395@gmail.com" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 14px 28px; background: var(--ink); color: var(--cream); text-decoration: none; font-family: var(--sans); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 6px; transition: var(--transition); border: 1px solid var(--ink);" onmouseover="this.style.background='var(--gold)';this.style.borderColor='var(--gold)';this.style.color='var(--ink-deep)';" onmouseout="this.style.background='var(--ink)';this.style.borderColor='var(--ink)';this.style.color='var(--cream)';">
         Reach Out
         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </a>
